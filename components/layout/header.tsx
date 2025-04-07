@@ -67,8 +67,10 @@ export default function Header() {
             </Link>
           ))}
           <ThemeToggle />
-          <Button size="sm" className="ml-4 bg-pink-neon hover:bg-pink-neon/90 hover-neon">
-            CV
+          <Button size="sm" className="ml-4 bg-pink-neon hover:bg-pink-neon/90 hover-neon" asChild>
+            <Link href="/CV_Haithem Hammami_CDI_Octobre .pdf" download>
+              CV
+            </Link>
           </Button>
         </nav>
 
@@ -104,8 +106,10 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-            <Button size="sm" className="w-full bg-pink-neon hover:bg-pink-neon/90 hover-neon">
-              CV
+            <Button size="sm" className="w-full bg-pink-neon hover:bg-pink-neon/90 hover-neon" asChild>
+              <Link href="/CV_Haithem Hammami_CDI_Octobre .pdf" download>
+                CV
+              </Link>
             </Button>
           </div>
         </motion.div>

@@ -5,6 +5,8 @@ import { cn } from "@/lib/utils"
 import Header from "@/components/layout/header"
 import Footer from "@/components/layout/footer"
 import { ThemeProvider } from "@/components/theme-provider"
+import ScrollToTop from "@/components/scroll-to-top"
+import CustomCursor from "@/components/custom-cursor"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -19,7 +21,7 @@ const fontHeading = FontHeading({
 })
 
 export const metadata = {
-  title: "H.Haithem | Développeur Full-Stack",
+  title: "Hammami.Haithem | Développeur Full-Stack",
   description: "Portfolio personnel présentant mes compétences, expériences et projets",
   icons: {
     icon: [
@@ -50,6 +52,8 @@ export default function RootLayout({
             <Header />
             <div className="flex-1">{children}</div>
             <Footer />
+            <ScrollToTop />
+            <CustomCursor />
           </div>
         </ThemeProvider>
       </body>

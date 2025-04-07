@@ -26,7 +26,7 @@ export default function Hero() {
           <div className="space-y-2">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight font-heading">
               <span className="block">Bonjour, je suis</span>
-              <span className="gradient-text">H.Haithem</span>
+              <span className="gradient-text">Haithem Hammami</span>
             </h1>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-muted-foreground font-heading">
               Développeur Full-Stack
@@ -50,7 +50,7 @@ export default function Hero() {
               asChild
               className="border-green-neon text-green-neon hover:bg-green-neon/10"
             >
-              <Link href="/resume.pdf" target="_blank">
+              <Link href="/CV_Haithem Hammami_CDI_Octobre .pdf" download>
                 Voir mon CV
               </Link>
             </Button>
@@ -96,14 +96,24 @@ export default function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="relative mx-auto lg:ml-auto"
         >
-          <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-background shadow-xl holographic-card">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-cyan/20 to-pink-neon/20 backdrop-blur-sm" />
-            <Image src="/placeholder.svg?height=400&width=400" alt="Profil" fill className="object-cover" priority />
+          <div className="relative w-auto h-auto sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-xl hover:scale-105 transition-transform duration-300 holographic-card">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-cyan/20 to-pink-neon/20" />
+            <Image
+              src="/image.png"
+              alt="Profil"
+              width={320} // Largeur de l'image (ajuste selon tes besoins)
+              height={320} // Hauteur de l'image (ajuste selon tes besoins)
+              className="object-contain" // Utilisation de 'object-contain' pour préserver la qualité
+              priority
+            />
           </div>
-          <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-background rounded-full flex items-center justify-center shadow-lg">
-            <span className="text-sm font-medium">+5 ans d'expérience</span>
+          
+          <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-gradient-to-br from-blue-cyan to-pink-neon rounded-full flex items-center justify-center shadow-2xl hover:scale-105 transition-transform duration-300">
+            <span className="text-sm font-bold text-white shadow-md">BAC +5</span>
           </div>
         </motion.div>
+
+        
       </div>
     </section>
   )
