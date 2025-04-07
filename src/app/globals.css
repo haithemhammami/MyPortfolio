@@ -1,26 +1,233 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Mode clair */
+    --background: 0 0% 100%;
+    --foreground: 204 80% 22%; /* Bleu Profond pour le texte */
+
+    --card: 0 0% 100%;
+    --card-foreground: 204 80% 22%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 204 80% 22%;
+
+    /* Bleu Cyan comme couleur primaire */
+    --primary: 191 100% 39%; /* #00A6C7 */
+    --primary-foreground: 0 0% 100%;
+
+    /* Vert Néon comme couleur secondaire */
+    --secondary: 157 100% 39%; /* #00C974 */
+    --secondary-foreground: 0 0% 100%;
+
+    /* Violet Électrique comme accent */
+    --accent: 276 100% 28%; /* #4A008E */
+    --accent-foreground: 0 0% 100%;
+
+    /* Rose Néon pour les éléments destructifs/alertes */
+    --destructive: 328 100% 65%; /* #FF4DBD */
+    --destructive-foreground: 0 0% 100%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 204 60% 40%;
+
+    --border: 204 30% 90%;
+    --input: 204 30% 90%;
+    --ring: 191 100% 39%;
+
+    --radius: 0.75rem;
+
+    /* Chart colors */
+    --chart-1: 191 100% 39%; /* Bleu Cyan */
+    --chart-2: 157 100% 39%; /* Vert Néon */
+    --chart-3: 204 100% 22%; /* Bleu Profond */
+    --chart-4: 276 100% 28%; /* Violet Électrique */
+    --chart-5: 328 100% 65%; /* Rose Néon */
+    --chart-6: 191 80% 50%; /* Bleu Cyan plus clair */
+  }
+
+  .dark {
+    /* Mode sombre */
+    --background: 204 80% 22%; /* Bleu Profond comme fond */
+    --foreground: 0 0% 95%;
+
+    --card: 204 70% 25%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 204 70% 25%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Bleu Cyan comme couleur primaire */
+    --primary: 191 100% 39%; /* #00A6C7 */
+    --primary-foreground: 0 0% 100%;
+
+    /* Vert Néon comme couleur secondaire */
+    --secondary: 157 100% 39%; /* #00C974 */
+    --secondary-foreground: 0 0% 100%;
+
+    /* Violet Électrique comme accent */
+    --accent: 276 100% 28%; /* #4A008E */
+    --accent-foreground: 0 0% 100%;
+
+    /* Rose Néon pour les éléments destructifs/alertes */
+    --destructive: 328 100% 65%; /* #FF4DBD */
+    --destructive-foreground: 0 0% 100%;
+
+    --muted: 204 50% 15%;
+    --muted-foreground: 204 30% 70%;
+
+    --border: 204 50% 30%;
+    --input: 204 50% 30%;
+    --ring: 191 100% 39%;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
 }
+
+.prose {
+  @apply max-w-none;
+}
+
+.prose h1 {
+  @apply text-2xl font-bold mt-8 mb-4;
+}
+
+.prose h2 {
+  @apply text-xl font-bold mt-6 mb-3;
+}
+
+.prose h3 {
+  @apply text-lg font-bold mt-4 mb-2;
+}
+
+.prose p {
+  @apply my-4;
+}
+
+.prose ul {
+  @apply list-disc pl-6 my-4;
+}
+
+.prose ol {
+  @apply list-decimal pl-6 my-4;
+}
+
+.prose li {
+  @apply mb-1;
+}
+
+.prose a {
+  @apply text-primary underline;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-muted pl-4 italic my-4;
+}
+
+.prose code {
+  @apply bg-muted px-1 py-0.5 rounded text-sm;
+}
+
+.prose pre {
+  @apply bg-muted p-4 rounded-lg overflow-x-auto my-4;
+}
+
+.prose pre code {
+  @apply bg-transparent p-0;
+}
+
+.prose img {
+  @apply rounded-lg my-6;
+}
+
+.prose hr {
+  @apply border-muted my-8;
+}
+
+/* Gradient backgrounds */
+.gradient-bg {
+  background: linear-gradient(135deg, #003f72, #00a6c7, #00c974, #ff4dbd);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #00a6c7, #00c974, #ff4dbd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Effets de survol améliorés */
+.hover-glow:hover {
+  box-shadow: 0 0 15px rgba(0, 201, 116, 0.5);
+  transition: all 0.3s ease;
+}
+
+.hover-neon:hover {
+  box-shadow: 0 0 20px rgba(255, 77, 189, 0.6);
+  transition: all 0.3s ease;
+}
+
+/* Animations pour les éléments interactifs */
+.pulse-effect {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 166, 199, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 166, 199, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 166, 199, 0);
+  }
+}
+
+/* Effet holographique pour les cartes */
+.holographic-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.holographic-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(30deg);
+  pointer-events: none;
+  z-index: 1;
+  transition: transform 0.5s;
+}
+
+.holographic-card:hover::before {
+  transform: rotate(30deg) translate(10%, 10%);
+}
+
