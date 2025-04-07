@@ -57,7 +57,7 @@ export default function Hero() {
           </div>
 
           <div className="flex items-center gap-4 pt-4">
-            <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <Link href="https://github.com/haithemhammami" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="ghost"
                 size="icon"
@@ -67,7 +67,7 @@ export default function Hero() {
                 <Github className="h-5 w-5" />
               </Button>
             </Link>
-            <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+            <Link href="www.linkedin.com/in/haithem-hammami" target="_blank" rel="noopener noreferrer">
               <Button
                 variant="ghost"
                 size="icon"
@@ -77,7 +77,7 @@ export default function Hero() {
                 <Linkedin className="h-5 w-5" />
               </Button>
             </Link>
-            <Link href="mailto:hello@example.com">
+            <Link href="mailto:haithem.hammami.pro@gmail.com">
               <Button
                 variant="ghost"
                 size="icon"
@@ -101,8 +101,8 @@ export default function Hero() {
             <Image
               src="/image.png"
               alt="Profil"
-              width={320} // Largeur de l'image (ajuste selon tes besoins)
-              height={320} // Hauteur de l'image (ajuste selon tes besoins)
+              width={640} // Largeur de l'image (ajuste selon tes besoins)
+              height={640} // Hauteur de l'image (ajuste selon tes besoins)
               className="object-contain" // Utilisation de 'object-contain' pour préserver la qualité
               priority
             />
