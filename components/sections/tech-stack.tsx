@@ -2,43 +2,80 @@
 
 import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
-import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Code2, Database, Globe, Server, Cpu, Terminal, Cloud, GitBranch, Figma, Layers } from "lucide-react"
 
+// Import des icônes de react-icons
+import {
+  SiHtml5,
+  SiCss3,
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiFramer,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiPostgresql,
+  SiFirebase,
+  SiAmazon,
+  SiDocker,
+  SiKubernetes,
+  SiGit,
+  SiGithub,
+  SiVercel,
+  SiJest,
+  SiFigma,
+  SiGraphql,
+  SiRedux,
+  SiPrisma,
+  //SiZustand,
+  SiZod,
+  SiPostman,
+  SiLinux,
+  SiNpm,
+} from "react-icons/si"
+
+// Définition des technologies avec leurs icônes
 const technicalSkills = [
-  { name: "JavaScript", icon: <Code2 className="h-5 w-5" /> },
-  { name: "TypeScript", icon: <Code2 className="h-5 w-5" /> },
-  { name: "React", icon: <Code2 className="h-5 w-5" /> },
-  { name: "Next.js", icon: <Globe className="h-5 w-5" /> },
-  { name: "Node.js", icon: <Server className="h-5 w-5" /> },
-  { name: "Express", icon: <Server className="h-5 w-5" /> },
-  { name: "GraphQL", icon: <Database className="h-5 w-5" /> },
-  { name: "REST API", icon: <Server className="h-5 w-5" /> },
-  { name: "HTML5", icon: <Code2 className="h-5 w-5" /> },
-  { name: "CSS3", icon: <Code2 className="h-5 w-5" /> },
-  { name: "Tailwind CSS", icon: <Code2 className="h-5 w-5" /> },
-  { name: "Redux", icon: <Layers className="h-5 w-5" /> },
+  { name: "HTML", icon: <SiHtml5 className="h-6 w-6 text-[#E34F26]" /> },
+  { name: "CSS", icon: <SiCss3 className="h-6 w-6 text-[#1572B6]" /> },
+  { name: "JavaScript", icon: <SiJavascript className="h-6 w-6 text-[#F7DF1E]" /> },
+  { name: "TypeScript", icon: <SiTypescript className="h-6 w-6 text-[#3178C6]" /> },
+  { name: "React", icon: <SiReact className="h-6 w-6 text-[#61DAFB]" /> },
+  { name: "Next.js", icon: <SiNextdotjs className="h-6 w-6" /> },
+  { name: "Tailwind CSS", icon: <SiTailwindcss className="h-6 w-6 text-[#06B6D4]" /> },
+  { name: "Framer Motion", icon: <SiFramer className="h-6 w-6 text-[#0055FF]" /> },
+  { name: "Node.js", icon: <SiNodedotjs className="h-6 w-6 text-[#339933]" /> },
+  { name: "Express", icon: <SiExpress className="h-6 w-6" /> },
+  { name: "GraphQL", icon: <SiGraphql className="h-6 w-6 text-[#E10098]" /> },
+  { name: "Redux", icon: <SiRedux className="h-6 w-6 text-[#764ABC]" /> },
 ]
 
 const tools = [
-  { name: "MongoDB", icon: <Database className="h-5 w-5" /> },
-  { name: "PostgreSQL", icon: <Database className="h-5 w-5" /> },
-  { name: "Firebase", icon: <Database className="h-5 w-5" /> },
-  { name: "AWS", icon: <Cloud className="h-5 w-5" /> },
-  { name: "Docker", icon: <Cpu className="h-5 w-5" /> },
-  { name: "Kubernetes", icon: <Cpu className="h-5 w-5" /> },
-  { name: "Git", icon: <GitBranch className="h-5 w-5" /> },
-  { name: "GitHub", icon: <GitBranch className="h-5 w-5" /> },
-  { name: "CI/CD", icon: <Terminal className="h-5 w-5" /> },
-  { name: "Jest", icon: <Terminal className="h-5 w-5" /> },
-  { name: "Figma", icon: <Figma className="h-5 w-5" /> },
-  { name: "Vercel", icon: <Cloud className="h-5 w-5" /> },
+  { name: "MongoDB", icon: <SiMongodb className="h-6 w-6 text-[#47A248]" /> },
+  { name: "PostgreSQL", icon: <SiPostgresql className="h-6 w-6 text-[#4169E1]" /> },
+  { name: "Prisma", icon: <SiPrisma className="h-6 w-6 text-[#2D3748]" /> },
+  { name: "Firebase", icon: <SiFirebase className="h-6 w-6 text-[#FFCA28]" /> },
+  { name: "AWS", icon: <SiAmazon className="h-6 w-6 text-[#FF9900]" /> },
+  { name: "Docker", icon: <SiDocker className="h-6 w-6 text-[#2496ED]" /> },
+  { name: "Kubernetes", icon: <SiKubernetes className="h-6 w-6 text-[#326CE5]" /> },
+  { name: "Git", icon: <SiGit className="h-6 w-6 text-[#F05032]" /> },
+  { name: "GitHub", icon: <SiGithub className="h-6 w-6" /> },
+  { name: "Vercel", icon: <SiVercel className="h-6 w-6" /> },
+  { name: "Jest", icon: <SiJest className="h-6 w-6 text-[#C21325]" /> },
+  { name: "Figma", icon: <SiFigma className="h-6 w-6 text-[#F24E1E]" /> },
+  { name: "Zustand", icon: <SiZod className="h-6 w-6" /> },
+  { name: "Zod", icon: <SiZod className="h-6 w-6 text-[#3068B7]" /> },
+  { name: "Postman", icon: <SiPostman className="h-6 w-6 text-[#FF6C37]" /> },
+  { name: "Linux", icon: <SiLinux className="h-6 w-6 text-[#FCC624]" /> },
+  { name: "NPM", icon: <SiNpm className="h-6 w-6 text-[#CB3837]" /> },
 ]
 
 export default function TechStack() {
   return (
-    <section id="tech-stack" className="py-20">
+    <section id="tech-stack" className="py-20 bg-gradient-to-b from-background to-muted/30">
       <div className="container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -50,7 +87,7 @@ export default function TechStack() {
           <Badge variant="outline" className="px-4 py-1 border-primary/20">
             Compétences
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold font-heading">Mon Expertise Technique</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-heading">Mon Tech Stack</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Technologies et outils que j'utilise pour donner vie aux produits
           </p>
@@ -69,54 +106,76 @@ export default function TechStack() {
             </TabsList>
 
             <TabsContent value="technical">
-              <Card className="bg-background/60 backdrop-blur-sm border-primary/10">
-                <CardContent className="p-6">
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                    {technicalSkills.map((skill, index) => (
-                      <motion.div
-                        key={skill.name}
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.3, delay: index * 0.05 }}
-                      >
-                        <div className="flex flex-col items-center justify-center p-4 h-full rounded-lg bg-muted/50 hover:bg-primary/5 transition-colors">
-                          <div className="p-2 rounded-full bg-primary/10 text-primary mb-3">{skill.icon}</div>
-                          <span className="text-sm font-medium">{skill.name}</span>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="flex flex-wrap justify-center gap-4">
+                {technicalSkills.map((skill, index) => (
+                  <motion.div
+                    key={skill.name}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: index * 0.05 }}
+                  >
+                    <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-background/80 border border-border/50 backdrop-blur-sm hover:border-primary/30 transition-all shadow-sm hover:shadow-md">
+                      {skill.icon}
+                      <span className="text-sm font-medium">{skill.name}</span>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </TabsContent>
 
             <TabsContent value="tools">
-              <Card className="bg-background/60 backdrop-blur-sm border-primary/10">
-                <CardContent className="p-6">
-                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                    {tools.map((tool, index) => (
-                      <motion.div
-                        key={tool.name}
-                        initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.3, delay: index * 0.05 }}
-                      >
-                        <div className="flex flex-col items-center justify-center p-4 h-full rounded-lg bg-muted/50 hover:bg-primary/5 transition-colors">
-                          <div className="p-2 rounded-full bg-primary/10 text-primary mb-3">{tool.icon}</div>
-                          <span className="text-sm font-medium">{tool.name}</span>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="flex flex-wrap justify-center gap-4">
+                {tools.map((tool, index) => (
+                  <motion.div
+                    key={tool.name}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: index * 0.05 }}
+                  >
+                    <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-background/80 border border-border/50 backdrop-blur-sm hover:border-primary/30 transition-all shadow-sm hover:shadow-md">
+                      {tool.icon}
+                      <span className="text-sm font-medium">{tool.name}</span>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </TabsContent>
           </Tabs>
+        </motion.div>
+
+        {/* Version alternative avec fond sombre comme dans l'image de référence */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-20"
+        >
+          <h3 className="text-2xl font-bold font-heading text-center mb-8">Technologies Maîtrisées</h3>
+
+          <div className="bg-slate-900 rounded-xl p-8 shadow-xl">
+            <div className="flex flex-wrap justify-center gap-4">
+              {[...technicalSkills, ...tools].slice(0, 18).map((tech, index) => (
+                <motion.div
+                  key={`dark-${tech.name}`}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: index * 0.05 }}
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/80 border border-slate-700 hover:border-primary/50 transition-all shadow-md">
+                    {tech.icon}
+                    <span className="text-sm font-medium text-white">{tech.name}</span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
   )
 }
-
