@@ -97,7 +97,7 @@ export default function Contact() {
       }
 
       // Succès
-      setFormSuccess("Votre message a été envoyé avec succès ! \nJe vous répondrai dans les plus brefs délais.")
+      setFormSuccess("Votre message a été envoyé avec succès !\nJe vous répondrai dans les plus brefs délais.")
       toast({
         title: "Message envoyé !",
         description: "Merci pour votre message. Je vous répondrai bientôt.",
@@ -273,7 +273,7 @@ export default function Contact() {
                         <CheckCircle2 className="h-5 w-5 mt-0.5 flex-shrink-0" />
                         <div className="flex-1">
                           <div className="flex justify-between items-center">
-                            <p className="text-sm">{formSuccess}</p>
+                            <p className="text-sm whitespace-pre-line">{formSuccess}</p>
                             <span className="text-xs font-medium">{messageTimer}s</span>
                           </div>
                         </div>
