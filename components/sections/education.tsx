@@ -3,44 +3,51 @@
 import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { BookOpen, Calendar, GraduationCap, Award } from "lucide-react"
+import { BookOpen, Calendar, GraduationCap, Award, Languages } from "lucide-react"
 
 const education = [
   {
-    degree: "Master en Informatique",
-    institution: "Université Stanford",
-    period: "2016 - 2018",
-    description: "Spécialisation en Intelligence Artificielle et Machine Learning. Diplômé avec mention.",
+    degree: "Mastère Lead Développeur Full Stack (en cours)",
+    institution: "EEMI",
+    period: "Depuis Oct. 2023",
+    description:
+      "Optimisation des logiciels, automatisation, intégration DevOps et solutions IoT & web.",
     icon: <GraduationCap className="h-10 w-10" />,
   },
   {
-    degree: "Licence en Génie Informatique",
-    institution: "MIT",
-    period: "2012 - 2016",
+    degree: "Licence en Automatisme et Informatique Industrielle",
+    institution: "ISTIC",
+    period: "Sept. 2020 - Juin 2023",
     description:
-      "Concentration sur le génie logiciel et l'architecture informatique. Participation à plusieurs hackathons.",
+      "Développement de systèmes de contrôle industriel, applications en temps réel et systèmes embarqués.",
     icon: <GraduationCap className="h-10 w-10" />,
   },
 ]
 
-const certifications = [
+const languages = [
   {
-    name: "AWS Certified Solutions Architect",
-    issuer: "Amazon Web Services",
-    date: "Jan 2022",
-    icon: <Award className="h-10 w-10" />,
+    id: "lang1",
+    language: "Arabe",
+    level: "Langue maternelle",
+    icon: <Languages className="h-10 w-10" />,
   },
   {
-    name: "Google Cloud Professional Developer",
-    issuer: "Google Cloud",
-    date: "Mar 2021",
-    icon: <Award className="h-10 w-10" />,
+    id: "lang2",
+    language: "Français",
+    level: "Courant",
+    icon: <Languages className="h-10 w-10" />,
   },
   {
-    name: "Certified Kubernetes Administrator",
-    issuer: "Cloud Native Computing Foundation",
-    date: "Sep 2020",
-    icon: <Award className="h-10 w-10" />,
+    id: "lang3",
+    language: "Anglais",
+    level: "Niveau avancé",
+    icon: <Languages className="h-10 w-10" />,
+  },
+  {
+    id: "lang4",
+    language: "Allemand",
+    level: "Niveau débutant",
+    icon: <Languages className="h-10 w-10" />,
   },
 ]
 
@@ -58,9 +65,9 @@ export default function Education() {
           <Badge variant="outline" className="px-4 py-1 border-primary/20">
             Formation
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold font-heading">Formation & Certifications</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-heading">Formation & Langues</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Mon parcours académique et mes certifications professionnelles
+            Mon parcours académique et mes compétences linguistiques
           </p>
         </motion.div>
 
@@ -107,26 +114,20 @@ export default function Education() {
             className="space-y-6"
           >
             <h3 className="text-2xl font-semibold font-heading flex items-center gap-2">
-              <Award className="h-5 w-5 text-primary" />
-              Certifications
+              <Languages className="h-5 w-5 text-primary" />
+              Langues
             </h3>
 
             <div className="space-y-6">
-              {certifications.map((cert, index) => (
+              {languages.map((lang, index) => (
                 <Card key={index} className="bg-background/60 backdrop-blur-sm border-primary/10 overflow-hidden">
                   <CardHeader className="flex flex-row items-start gap-4 pb-2">
-                    <div className="p-2 rounded-md bg-primary/10 text-primary">{cert.icon}</div>
+                    <div className="p-2 rounded-md bg-primary/10 text-primary">{lang.icon}</div>
                     <div>
-                      <CardTitle className="font-heading">{cert.name}</CardTitle>
-                      <CardDescription>{cert.issuer}</CardDescription>
+                      <CardTitle className="font-heading">{lang.language}</CardTitle>
+                      <CardDescription>{lang.level}</CardDescription>
                     </div>
                   </CardHeader>
-                  <CardContent>
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      {cert.date}
-                    </div>
-                  </CardContent>
                 </Card>
               ))}
             </div>
@@ -136,4 +137,3 @@ export default function Education() {
     </section>
   )
 }
-

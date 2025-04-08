@@ -20,7 +20,7 @@ export default function About() {
           </Badge>
           <h2 className="text-3xl md:text-4xl font-bold font-heading">Mon Parcours</h2>
           <p className="text-muted-foreground max-w-3xl mx-auto">
-          Apprenez-en plus sur moi, mon expérience et ce qui me motive en tant qu'ingénieur logiciel.
+          Apprenez-en plus sur moi, mon expérience et ce qui me motive en tant qu'ingénieur logiciel
           </p>
         </motion.div>
 

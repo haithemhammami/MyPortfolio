@@ -10,45 +10,48 @@ import Link from "next/link"
 const experiences = [
   {
     id: "exp1",
-    title: "Développeur Frontend Senior",
-    company: "Tech Innovations Inc.",
-    period: "Jan 2022 - Présent",
+    title: "Développeur Automatisation Outils RH (Alternance)",
+    company: "Valeo – Cergy, Île-de-France (Hybride)",
+    period: "Janv. 2024 – Présent",
     description:
-      "Direction de l'équipe de développement frontend dans la création d'applications web modernes utilisant React, Next.js et TypeScript.",
+      "Développement et optimisation d’outils numériques RH pour l’administration, la formation et la paie.",
     responsibilities: [
-      "Architecture et implémentation de solutions frontend évolutives",
-      "Mentorat des développeurs juniors et réalisation de revues de code",
-      "Collaboration avec les équipes de design et de produit pour offrir des expériences utilisateur de haute qualité",
-      "Mise en place de pipelines CI/CD et de stratégies de test",
+      "Automatisation de processus métier via Apps Script et outils Workday",
+      "Maintenance, debug et suivi de production des outils développés",
+      "Rédaction de spécifications techniques et analyse fonctionnelle",
+      "Mise en place de tableaux de bord et reporting RH",
     ],
   },
   {
     id: "exp2",
-    title: "Développeur Full-Stack",
-    company: "Digital Solutions Ltd.",
-    period: "Mar 2020 - Déc 2021",
-    description: "Développement d'applications web full-stack utilisant React, Node.js et MongoDB.",
+    title: "Développeur Full Stack IoT – Projet de Fin d’Étude",
+    company: "COFICAB Group – Tunisie (Hybride)",
+    period: "Janv. 2023 – Juin 2023",
+    description:
+      "Conception d’un système IoT pour la supervision de chariots élévateurs à distance.",
     responsibilities: [
-      "Création d'API RESTful et de points de terminaison GraphQL",
-      "Implémentation de systèmes d'authentification et d'autorisation",
-      "Optimisation des performances des applications et des requêtes de base de données",
-      "Collaboration avec des équipes pluridisciplinaires pour livrer des fonctionnalités dans les délais",
+      "Développement d’un système embarqué avec ESP32 pour la collecte de données (GPS, batterie, capteurs)",
+      "Communication temps réel via MQTT vers un dashboard web",
+      "Création d’une interface web intuitive pour visualiser les KPIs",
+      "Déploiement et tests en conditions réelles",
     ],
   },
   {
     id: "exp3",
-    title: "Développeur Frontend",
-    company: "WebCraft Agency",
-    period: "Juin 2018 - Fév 2020",
-    description: "Création d'interfaces web responsives et interactives pour divers clients.",
+    title: "Stage Technique | Analyse Électronique",
+    company: "COFICAB Group – Tunisie (Sur site)",
+    period: "Juin 2022 – Juil. 2022",
+    description:
+      "Analyse d’une carte électronique dans un environnement industriel pour améliorer la fiabilité matérielle.",
     responsibilities: [
-      "Développement de sites web responsifs utilisant HTML, CSS et JavaScript",
-      "Implémentation de composants UI avec React et Redux",
-      "Collaboration avec les designers pour assurer des implémentations fidèles aux maquettes",
-      "Optimisation des sites web pour les performances et le SEO",
+      "Étude des entrées/sorties et diagnostic des dysfonctionnements électroniques",
+      "Mise en place de solutions de protection électrique",
+      "Création d’une check-list de tests et procédures de validation",
+      "Documentation des résultats et recommandations techniques",
     ],
   },
 ]
+
 
 export default function Experience() {
   return (
