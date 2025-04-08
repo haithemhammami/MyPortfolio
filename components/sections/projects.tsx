@@ -11,46 +11,46 @@ import Link from "next/link"
 const projects = [
   {
     id: "project1",
-    title: "Plateforme E-Commerce",
+    title: "YumiMind",
     description:
-      "Une plateforme e-commerce full-stack avec gestion des produits, fonctionnalité de panier et traitement des paiements.",
-    image: "/placeholder.svg?height=300&width=600",
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "MongoDB"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+      "Application innovante basée sur l'intelligence artificielle qui simplifie votre quotidien en gérant vos courses alimentaires de A à Z.",
+    image: "/yumimind.png?height=300&width=600",
+    tags: ["Next.js", "AI", "E-commerce"],
+    liveUrl: "https://yumimind.vercel.app",
+    githubUrl: "https://github.com/haithemhammami/IA_Drive_PEC.git",
     featured: true,
   },
   {
     id: "project2",
-    title: "Application de Gestion de Tâches",
+    title: "ICO Workshop",
     description:
-      "Une application collaborative de gestion de tâches avec mises à jour en temps réel et fonctionnalités de collaboration d'équipe.",
-    image: "/placeholder.svg?height=300&width=600",
-    tags: ["React", "Node.js", "Socket.io", "PostgreSQL"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+      "Un projet collaboratif pour développer un jeu interactif intégrant un système de back-office et un front-end immersif, avec une base de données robuste.",
+    image: "/ICO.png?height=300&width=600",
+    tags: ["React", "Node.js", "Game", "Database"],
+    liveUrl: "https://ico-game.vercel.app",
+    githubUrl: "https://github.com/ArthurDelaporte/ico-workshop.git",
     featured: true,
   },
   {
     id: "project3",
-    title: "Générateur de Contenu IA",
+    title: "Mon Portfolio",
     description:
-      "Un outil de génération de contenu alimenté par l'IA qui crée des textes marketing basés sur les entrées des utilisateurs.",
-    image: "/placeholder.svg?height=300&width=600",
-    tags: ["React", "OpenAI API", "Express", "Firebase"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+      "Mon portfolio actuel à explorer à votre goût, offrant un aperçu complet de mes projets et compétences.",
+    image: "/portfolio.png?height=300&width=600",
+    tags: ["Next.js", "React", "Portfolio"],
+    liveUrl: "https://haithem.netlify.app/",
+    githubUrl: "https://github.com/haithemhammami/MyPortfolio.git",
     featured: true,
   },
   {
     id: "project4",
-    title: "Tableau de Bord Météo",
+    title: "Projet PokémonTP",
     description:
-      "Un tableau de bord météo qui affiche les données météorologiques actuelles et prévisionnelles pour plusieurs emplacements.",
+      "Application web simple utilisant Express.js pour récupérer des données depuis une API Pokémon et permettre aux utilisateurs de contacter l'équipe du projet.",
     image: "/placeholder.svg?height=300&width=600",
-    tags: ["React", "Weather API", "Chart.js", "Tailwind CSS"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    tags: ["Express.js", "API", "Web App"],
+    liveUrl: "", 
+    githubUrl: "https://github.com/haithemhammami/ProjectPokemonTP.git", 
     featured: false,
   },
 ]
@@ -141,4 +141,3 @@ export default function Projects() {
     </section>
   )
 }
-
