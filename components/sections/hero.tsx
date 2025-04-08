@@ -29,13 +29,13 @@ export default function Hero() {
               <span className="gradient-text">Haithem Hammami</span>
             </h1>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-muted-foreground font-heading">
-              Développeur Full-Stack
+            Ingénieur Logiciel Full Stack
             </h2>
           </div>
 
           <p className="text-lg text-muted-foreground max-w-lg">
-            Je crée des expériences numériques exceptionnelles et accessibles pour le web. Spécialisé dans les
-            technologies web modernes et les applications évolutives.
+            Je transforme les idées en solutions digitales performantes.
+            De l'interface utilisateur à l'architecture logicielle, j'interviens sur l'ensemble du cycle de développement.
           </p>
 
           <div className="flex flex-wrap gap-4">
