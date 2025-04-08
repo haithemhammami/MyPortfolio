@@ -11,8 +11,12 @@ try {
   }
 }
 
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  env: {
+    EMAIL_PASSWORD: process.env.EMAIL_PASSWORD,
+  },
   eslint: {
     ignoreDuringBuilds: true,
   },
