@@ -121,7 +121,7 @@ export default function TechStack() {
           <Badge variant="outline" className="px-4 py-1 border-primary/20">
             Compétences
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold font-heading">Mon Tech Stack</h2>
+          <h2 className="text-3xl md:text-4xl font-bold font-heading">Ma Stack Technique</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Technologies et outils que j'utilise pour donner vie aux produits
           </p>
