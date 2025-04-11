@@ -5,84 +5,117 @@ import { ArrowLeft, ExternalLink, Github } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
-// This would typically come from a database or API
+// Données des projets cohérentes avec components/sections/projects.tsx
 const projects = [
   {
     id: "project1",
-    title: "E-Commerce Platform",
+    title: "YumiMind",
     description:
-      "A full-stack e-commerce platform with product management, cart functionality, and payment processing.",
+      "Application innovante basée sur l'intelligence artificielle qui simplifie votre quotidien en gérant vos courses alimentaires de A à Z.",
     fullDescription: `
-      This e-commerce platform provides a complete solution for online stores. It includes features such as:
+      YumiMind est une application innovante qui révolutionne la façon dont vous gérez vos courses alimentaires. Grâce à l'intelligence artificielle, elle vous permet de:
       
-      - User authentication and profile management
-      - Product catalog with categories and search functionality
-      - Shopping cart and wishlist
-      - Secure checkout with Stripe integration
-      - Order tracking and history
-      - Admin dashboard for product and order management
+      - Planifier vos repas de la semaine en fonction de vos préférences et restrictions alimentaires
+      - Générer automatiquement des listes de courses optimisées
+      - Suggérer des recettes personnalisées basées sur les ingrédients que vous avez déjà
+      - Réduire le gaspillage alimentaire grâce à une gestion intelligente des stocks
+      - Suivre vos habitudes alimentaires et vous proposer des améliorations
       
-      The application is built with Next.js for the frontend, with MongoDB as the database. It uses Stripe for payment processing and features responsive design for optimal viewing on all devices.
+      L'application est construite avec Next.js pour le frontend, utilise une API Node.js pour le backend, et intègre des modèles d'IA pour les recommandations personnalisées.
     `,
-    image: "/placeholder.svg?height=600&width=1200",
+    image: "/yumimind.png",
     gallery: [
       "/placeholder.svg?height=400&width=600",
       "/placeholder.svg?height=400&width=600",
       "/placeholder.svg?height=400&width=600",
     ],
-    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "MongoDB"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    tags: ["Next.js", "AI", "E-commerce"],
+    liveUrl: "https://yumimind.vercel.app",
+    githubUrl: "https://github.com/haithemhammami/IA_Drive_PEC.git",
     challenges:
-      "Implementing a secure payment system and ensuring data consistency across the application were the main challenges. I solved these by using Stripe's secure API and implementing robust state management.",
+      "Le principal défi était d'intégrer des modèles d'IA capables de comprendre les préférences alimentaires des utilisateurs et de générer des recommandations pertinentes. J'ai également dû concevoir une interface utilisateur intuitive qui simplifie la planification des repas et la gestion des courses.",
     learnings:
-      "This project deepened my understanding of e-commerce workflows and improved my skills in handling complex state management in React applications.",
+      "Ce projet m'a permis d'approfondir mes connaissances en IA et en traitement du langage naturel. J'ai également amélioré mes compétences en conception d'interfaces utilisateur centrées sur l'expérience utilisateur.",
     featured: true,
   },
   {
     id: "project2",
-    title: "Task Management App",
-    description: "A collaborative task management application with real-time updates and team collaboration features.",
+    title: "ICO Workshop",
+    description:
+      "Un projet collaboratif pour développer un jeu interactif intégrant un système de back-office et un front-end immersif, avec une base de données robuste.",
     fullDescription: `
-      This task management application helps teams collaborate effectively by providing:
+      ICO Workshop est un projet de jeu interactif développé en collaboration avec une équipe de développeurs. Ce projet comprend:
       
-      - Real-time task updates and notifications
-      - Team collaboration with comments and mentions
-      - Task assignment and priority management
-      - Deadline tracking and calendar integration
-      - File attachments and sharing
-      - Progress tracking with customizable boards and lists
+      - Un système de back-office complet pour la gestion du contenu et des utilisateurs
+      - Une interface front-end immersive avec des animations fluides
+      - Une base de données robuste pour stocker les progressions et les statistiques des joueurs
+      - Un système d'authentification sécurisé
+      - Des fonctionnalités multijoueurs en temps réel
       
-      The application uses React for the frontend with Node.js and Express for the backend. Socket.io enables real-time updates, and PostgreSQL stores the data. The app features a clean, intuitive interface that enhances productivity.
+      Le projet utilise React pour le front-end, Node.js pour le back-end, et une base de données MongoDB pour le stockage des données. L'architecture est conçue pour être évolutive et performante, même avec un grand nombre d'utilisateurs simultanés.
     `,
-    image: "/placeholder.svg?height=600&width=1200",
+    image: "/ICO.png",
     gallery: [
       "/placeholder.svg?height=400&width=600",
       "/placeholder.svg?height=400&width=600",
       "/placeholder.svg?height=400&width=600",
     ],
-    tags: ["React", "Node.js", "Socket.io", "PostgreSQL"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    tags: ["React", "Node.js", "Game", "Database"],
+    liveUrl: "https://ico-game.vercel.app",
+    githubUrl: "https://github.com/ArthurDelaporte/ico-workshop.git",
     challenges:
-      "Implementing real-time updates while maintaining performance was challenging. I used Socket.io and optimized database queries to ensure smooth operation even with multiple users.",
-    learnings: "This project improved my understanding of real-time applications and database optimization techniques.",
+      "La synchronisation en temps réel entre les joueurs était un défi majeur, ainsi que la conception d'une architecture de base de données qui permet des requêtes rapides pour les fonctionnalités de jeu. L'optimisation des performances pour garantir une expérience fluide a également nécessité beaucoup de travail.",
+    learnings:
+      "Ce projet m'a appris l'importance de la planification architecturale dans les applications complexes et m'a permis de développer mes compétences en travail d'équipe et en gestion de projet.",
     featured: true,
   },
   {
     id: "project3",
-    title: "AI Content Generator",
-    description: "An AI-powered content generation tool that creates marketing copy based on user inputs.",
+    title: "Mon Portfolio",
+    description:
+      "Mon portfolio actuel à explorer à votre goût, offrant un aperçu complet de mes projets et compétences.",
     fullDescription: `
-      This AI content generator helps marketers and content creators by:
+      Ce portfolio personnel est conçu pour présenter mes compétences, projets et expériences professionnelles de manière interactive et engageante. Caractéristiques principales:
       
-      - Generating marketing copy based on product descriptions
-      - Creating social media posts with customizable tones
-      - Suggesting headlines and email subject lines
-      - Providing SEO-optimized content recommendations
-      - Offering editing and refinement tools
+      - Design moderne et responsive adapté à tous les appareils
+      - Animations fluides avec Framer Motion pour une expérience utilisateur dynamique
+      - Sections détaillées sur mes compétences techniques, projets et parcours professionnel
+      - Formulaire de contact fonctionnel pour faciliter la prise de contact
+      - Mode sombre/clair pour une expérience de lecture confortable
+      - Optimisation des performances pour des temps de chargement rapides
       
-      The application leverages OpenAI's API for content generation, with a React frontend and Express backend. Firebase handles authentication and data storage.
+      Développé avec Next.js, TypeScript et Tailwind CSS, ce portfolio met en pratique les meilleures pratiques de développement web moderne.
+    `,
+    image: "/portfolio.png",
+    gallery: [
+      "/placeholder.svg?height=400&width=600",
+      "/placeholder.svg?height=400&width=600",
+      "/placeholder.svg?height=400&width=600",
+    ],
+    tags: ["Next.js", "React", "Portfolio"],
+    liveUrl: "https://haithem.netlify.app/",
+    githubUrl: "https://github.com/haithemhammami/MyPortfolio.git",
+    challenges:
+      "Créer un design unique et personnel tout en maintenant une excellente performance était un défi. J'ai également travaillé à rendre le site accessible et compatible avec tous les navigateurs modernes.",
+    learnings:
+      "Ce projet m'a permis d'approfondir mes connaissances en design UI/UX et d'explorer des techniques d'animation avancées avec Framer Motion. J'ai également appris à optimiser les performances d'une application Next.js.",
+    featured: true,
+  },
+  {
+    id: "project4",
+    title: "Projet PokémonTP",
+    description:
+      "Application web simple utilisant Express.js pour récupérer des données depuis une API Pokémon et permettre aux utilisateurs de contacter l'équipe du projet.",
+    fullDescription: `
+      Projet PokémonTP est une application web éducative qui utilise l'API Pokémon pour afficher des informations sur différents Pokémon. Fonctionnalités principales:
+      
+      - Interface utilisateur simple et intuitive pour rechercher des Pokémon
+      - Affichage détaillé des caractéristiques et statistiques de chaque Pokémon
+      - Système de filtrage par type, génération et autres attributs
+      - Formulaire de contact pour permettre aux utilisateurs de communiquer avec l'équipe
+      - API RESTful construite avec Express.js
+      
+      Ce projet a été développé comme exercice pratique pour démontrer l'utilisation d'Express.js et la consommation d'API externes.
     `,
     image: "/placeholder.svg?height=600&width=1200",
     gallery: [
@@ -90,14 +123,14 @@ const projects = [
       "/placeholder.svg?height=400&width=600",
       "/placeholder.svg?height=400&width=600",
     ],
-    tags: ["React", "OpenAI API", "Express", "Firebase"],
-    liveUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    tags: ["Express.js", "API", "Web App"],
+    liveUrl: "",
+    githubUrl: "https://github.com/haithemhammami/ProjectPokemonTP.git",
     challenges:
-      "Ensuring the AI generated relevant and high-quality content was the main challenge. I implemented prompt engineering techniques and user feedback mechanisms to improve output quality.",
+      "La gestion des limites de l'API Pokémon et l'optimisation des requêtes pour éviter les temps de chargement longs étaient les principaux défis. J'ai également dû concevoir une interface utilisateur intuitive pour naviguer dans une grande quantité de données.",
     learnings:
-      "This project taught me about AI integration in web applications and the importance of user feedback loops in AI systems.",
-    featured: true,
+      "Ce projet m'a permis de mieux comprendre le fonctionnement des API RESTful et d'améliorer mes compétences en Express.js. J'ai également appris à gérer efficacement les données externes et à les présenter de manière claire.",
+    featured: false,
   },
 ]
 
@@ -107,11 +140,11 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
   if (!project) {
     return (
       <div className="container py-20 text-center">
-        <h1 className="text-3xl font-bold mb-4">Project Not Found</h1>
-        <p className="text-muted-foreground mb-8">The project you're looking for doesn't exist.</p>
+        <h1 className="text-3xl font-bold mb-4">Projet Non Trouvé</h1>
+        <p className="text-muted-foreground mb-8">Le projet que vous recherchez n'existe pas.</p>
         <Button asChild>
           <Link href="/projects">
-            <ArrowLeft className="mr-2 h-4 w-4" /> Back to Projects
+            <ArrowLeft className="mr-2 h-4 w-4" /> Retour aux Projets
           </Link>
         </Button>
       </div>
@@ -124,7 +157,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
         <div className="mb-8">
           <Button variant="ghost" asChild>
             <Link href="/#projects">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Back to Projects
+              <ArrowLeft className="mr-2 h-4 w-4" /> Retour aux Projets
             </Link>
           </Button>
         </div>
@@ -143,7 +176,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
 
             <div className="space-y-6">
               <div>
-                <h1 className="text-3xl md:text-4xl font-bold">{project.title}</h1>
+                <h1 className="text-3xl md:text-4xl font-bold font-heading">{project.title}</h1>
                 <p className="text-muted-foreground mt-2">{project.description}</p>
               </div>
 
@@ -156,13 +189,13 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
               </div>
 
               <div className="prose dark:prose-invert max-w-none">
-                <h2>Overview</h2>
+                <h2 className="text-2xl font-semibold font-heading">Aperçu</h2>
                 <div className="whitespace-pre-line">{project.fullDescription}</div>
 
-                <h2>Challenges & Solutions</h2>
+                <h2 className="text-2xl font-semibold font-heading">Défis & Solutions</h2>
                 <p>{project.challenges}</p>
 
-                <h2>Learnings</h2>
+                <h2 className="text-2xl font-semibold font-heading">Apprentissages</h2>
                 <p>{project.learnings}</p>
               </div>
 
@@ -171,7 +204,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
                   <div key={index} className="relative aspect-video overflow-hidden rounded-lg border">
                     <Image
                       src={image || "/placeholder.svg"}
-                      alt={`${project.title} screenshot ${index + 1}`}
+                      alt={`${project.title} capture d'écran ${index + 1}`}
                       fill
                       className="object-cover"
                     />
@@ -182,29 +215,31 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
           </div>
 
           <div className="space-y-6">
-            <Card>
+            <Card className="bg-background/60 backdrop-blur-sm border-primary/10">
               <CardHeader>
-                <CardTitle>Project Links</CardTitle>
-                <CardDescription>Visit the live demo or view the source code</CardDescription>
+                <CardTitle>Liens du Projet</CardTitle>
+                <CardDescription>Visitez la démo en direct ou consultez le code source</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
-                <Button className="w-full" asChild>
-                  <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="mr-2 h-4 w-4" /> Live Demo
-                  </Link>
-                </Button>
+                {project.liveUrl && (
+                  <Button className="w-full bg-blue-cyan hover:bg-blue-cyan/90 hover-glow" asChild>
+                    <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="mr-2 h-4 w-4" /> Démo en Ligne
+                    </Link>
+                  </Button>
+                )}
                 <Button variant="outline" className="w-full" asChild>
                   <Link href={project.githubUrl} target="_blank" rel="noopener noreferrer">
-                    <Github className="mr-2 h-4 w-4" /> Source Code
+                    <Github className="mr-2 h-4 w-4" /> Code Source
                   </Link>
                 </Button>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="bg-background/60 backdrop-blur-sm border-primary/10">
               <CardHeader>
-                <CardTitle>Technologies Used</CardTitle>
-                <CardDescription>Key technologies and tools used in this project</CardDescription>
+                <CardTitle>Technologies Utilisées</CardTitle>
+                <CardDescription>Technologies et outils clés utilisés dans ce projet</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="list-disc list-inside space-y-2 text-muted-foreground">
@@ -215,14 +250,14 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="bg-background/60 backdrop-blur-sm border-primary/10">
               <CardHeader>
-                <CardTitle>Other Projects</CardTitle>
-                <CardDescription>Check out some of my other work</CardDescription>
+                <CardTitle>Autres Projets</CardTitle>
+                <CardDescription>Découvrez mes autres réalisations</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 {projects
-                  .filter((p) => p.id !== project.id)
+                  .filter((p) => p.id !== project.id && p.featured)
                   .slice(0, 3)
                   .map((p) => (
                     <Link
@@ -242,4 +277,3 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
     </main>
   )
 }
-

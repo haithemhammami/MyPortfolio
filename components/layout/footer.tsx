@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Github, Linkedin, Mail, Twitter } from "lucide-react"
+import { Github, Linkedin, Mail } from "lucide-react"
 import Logo from "@/components/logo"
 
 export default function Footer() {
@@ -15,7 +15,7 @@ export default function Footer() {
               <h3 className="text-lg font-semibold">H.Haithem</h3>
             </div>
             <p className="text-sm text-muted-foreground max-w-xs">
-              Développeur Full-Stack spécialisé dans la création d'expériences numériques exceptionnelles.
+            Ingénieur Logiciel Full-Stack spécialisé dans la création d'expériences numériques exceptionnelles.
             </p>
           </div>
 
@@ -48,16 +48,13 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Me Suivre</h3>
             <div className="flex space-x-4">
-              <Link href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <Link href="https://github.com/haithemhammami" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <Github className="h-5 w-5 text-muted-foreground hover:text-blue-cyan transition-colors" />
               </Link>
-              <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <Link href="https://www.linkedin.com/in/haithem-hammami/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <Linkedin className="h-5 w-5 text-muted-foreground hover:text-blue-cyan transition-colors" />
               </Link>
-              <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <Twitter className="h-5 w-5 text-muted-foreground hover:text-blue-cyan transition-colors" />
-              </Link>
-              <Link href="mailto:hello@example.com" aria-label="Email">
+              <Link href="mailto:haithem.hammami.pro@gmail.com" aria-label="Email">
                 <Mail className="h-5 w-5 text-muted-foreground hover:text-blue-cyan transition-colors" />
               </Link>
             </div>
