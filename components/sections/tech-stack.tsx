@@ -15,7 +15,6 @@ import {
   SiTailwindcss,
   SiFramer,
   SiNodedotjs,
-  SiExpress,
   SiMongodb,
   SiPostgresql,
   SiFirebase,
@@ -28,13 +27,20 @@ import {
   SiJest,
   SiFigma,
   SiGraphql,
-  SiRedux,
   SiPrisma,
-  //SiZustand,
-  SiZod,
   SiPostman,
   SiLinux,
   SiNpm,
+  // Nouvelles icônes pour Embarqué/IoT
+  SiArduino,
+  SiRaspberrypi,
+  SiPython,
+  // Nouvelles icônes pour Mobile
+  SiFlutter,
+  SiDart,
+  SiAndroidstudio,
+  SiKotlin,
+  SiOpenjdk ,
 } from "react-icons/si"
 
 // Définition des technologies avec leurs icônes
@@ -48,9 +54,7 @@ const technicalSkills = [
   { name: "Tailwind CSS", icon: <SiTailwindcss className="h-6 w-6 text-[#06B6D4]" /> },
   { name: "Framer Motion", icon: <SiFramer className="h-6 w-6 text-[#0055FF]" /> },
   { name: "Node.js", icon: <SiNodedotjs className="h-6 w-6 text-[#339933]" /> },
-  { name: "Express", icon: <SiExpress className="h-6 w-6" /> },
   { name: "GraphQL", icon: <SiGraphql className="h-6 w-6 text-[#E10098]" /> },
-  { name: "Redux", icon: <SiRedux className="h-6 w-6 text-[#764ABC]" /> },
 ]
 
 const tools = [
@@ -66,11 +70,41 @@ const tools = [
   { name: "Vercel", icon: <SiVercel className="h-6 w-6" /> },
   { name: "Jest", icon: <SiJest className="h-6 w-6 text-[#C21325]" /> },
   { name: "Figma", icon: <SiFigma className="h-6 w-6 text-[#F24E1E]" /> },
-  { name: "Zustand", icon: <SiZod className="h-6 w-6" /> },
-  { name: "Zod", icon: <SiZod className="h-6 w-6 text-[#3068B7]" /> },
   { name: "Postman", icon: <SiPostman className="h-6 w-6 text-[#FF6C37]" /> },
   { name: "Linux", icon: <SiLinux className="h-6 w-6 text-[#FCC624]" /> },
   { name: "NPM", icon: <SiNpm className="h-6 w-6 text-[#CB3837]" /> },
+]
+
+// Nouvelles compétences pour l'embarqué/IoT
+const embeddedSkills = [
+  { name: "Arduino", icon: <SiArduino className="h-6 w-6 text-[#00979D]" /> },
+  { name: "Raspberry Pi", icon: <SiRaspberrypi className="h-6 w-6 text-[#A22846]" /> },
+  {
+    name: "ESP32 / ESP8266",
+    icon: (
+      <div className="flex items-center justify-center h-6 w-6 bg-[#E7352C] rounded-full text-white font-bold text-xs">
+        ESP
+      </div>
+    ),
+  },
+  { name: "MicroPython", icon: <SiPython className="h-6 w-6 text-[#3776AB]" /> },
+]
+
+// Nouvelles compétences pour le mobile
+const mobileSkills = [
+  { name: "Flutter", icon: <SiFlutter className="h-6 w-6 text-[#02569B]" /> },
+  { name: "Dart", icon: <SiDart className="h-6 w-6 text-[#0175C2]" /> },
+  { name: "Android Studio", icon: <SiAndroidstudio className="h-6 w-6 text-[#3DDC84]" /> },
+  { name: "Kotlin", icon: <SiKotlin className="h-6 w-6 text-[#7F52FF]" /> },
+  { name: "Java", icon: <SiOpenjdk  className="h-6 w-6 text-[#007396]" /> },
+]
+
+// Toutes les compétences combinées pour la section sombre
+const allSkills = [
+  ...technicalSkills,
+  ...tools.slice(0, 8), // Prendre seulement une partie des outils pour ne pas surcharger
+  ...embeddedSkills.slice(0, 2),
+  ...mobileSkills.slice(0, 3),
 ]
 
 export default function TechStack() {
@@ -100,9 +134,11 @@ export default function TechStack() {
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <Tabs defaultValue="technical" className="w-full">
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8">
-              <TabsTrigger value="technical">Compétences Techniques</TabsTrigger>
-              <TabsTrigger value="tools">Outils & Technologies</TabsTrigger>
+            <TabsList className="grid w-full max-w-md mx-auto grid-cols-4 mb-8">
+              <TabsTrigger value="technical">Web</TabsTrigger>
+              <TabsTrigger value="tools">Outils</TabsTrigger>
+              <TabsTrigger value="embedded">IoT</TabsTrigger>
+              <TabsTrigger value="mobile">Mobile</TabsTrigger>
             </TabsList>
 
             <TabsContent value="technical">
@@ -114,6 +150,7 @@ export default function TechStack() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.3, delay: index * 0.05 }}
+                    whileHover={{ scale: 1.05 }}
                   >
                     <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-background/80 border border-border/50 backdrop-blur-sm hover:border-primary/30 transition-all shadow-sm hover:shadow-md">
                       {skill.icon}
@@ -133,10 +170,51 @@ export default function TechStack() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.3, delay: index * 0.05 }}
+                    whileHover={{ scale: 1.05 }}
                   >
                     <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-background/80 border border-border/50 backdrop-blur-sm hover:border-primary/30 transition-all shadow-sm hover:shadow-md">
                       {tool.icon}
                       <span className="text-sm font-medium">{tool.name}</span>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="embedded">
+              <div className="flex flex-wrap justify-center gap-4">
+                {embeddedSkills.map((skill, index) => (
+                  <motion.div
+                    key={skill.name}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: index * 0.05 }}
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-background/80 border border-border/50 backdrop-blur-sm hover:border-primary/30 transition-all shadow-sm hover:shadow-md">
+                      {skill.icon}
+                      <span className="text-sm font-medium">{skill.name}</span>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="mobile">
+              <div className="flex flex-wrap justify-center gap-4">
+                {mobileSkills.map((skill, index) => (
+                  <motion.div
+                    key={skill.name}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: index * 0.05 }}
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-background/80 border border-border/50 backdrop-blur-sm hover:border-primary/30 transition-all shadow-sm hover:shadow-md">
+                      {skill.icon}
+                      <span className="text-sm font-medium">{skill.name}</span>
                     </div>
                   </motion.div>
                 ))}
@@ -156,8 +234,11 @@ export default function TechStack() {
           <h3 className="text-2xl font-bold font-heading text-center mb-8">Technologies Maîtrisées</h3>
 
           <div className="bg-slate-900 rounded-xl p-8 shadow-xl">
+            <div className="text-center mb-6">
+              <p className="text-slate-400 italic">Je m'efforce constamment de m'améliorer</p>
+            </div>
             <div className="flex flex-wrap justify-center gap-4">
-              {[...technicalSkills, ...tools].slice(0, 18).map((tech, index) => (
+              {allSkills.map((tech, index) => (
                 <motion.div
                   key={`dark-${tech.name}`}
                   initial={{ opacity: 0, scale: 0.8 }}
