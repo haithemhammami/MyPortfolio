@@ -40,7 +40,12 @@ import {
   SiDart,
   SiAndroidstudio,
   SiKotlin,
-  SiOpenjdk ,
+  SiOpenjdk,
+  SiMqtt,
+  SiBluetooth,
+  SiWii,
+  SiC,
+  SiCplusplus,
 } from "react-icons/si"
 
 // Définition des technologies avec leurs icônes
@@ -88,6 +93,37 @@ const embeddedSkills = [
     ),
   },
   { name: "MicroPython", icon: <SiPython className="h-6 w-6 text-[#3776AB]" /> },
+  // Technologies de communication
+  { name: "MQTT", icon: <SiMqtt className="h-6 w-6 text-[#660066]" /> },
+  { name: "Bluetooth", icon: <SiBluetooth className="h-6 w-6 text-[#0082FC]" /> },
+  { name: "WiFi", icon: <SiWii className="h-6 w-6 text-[#0089D0]" /> },
+  {
+    name: "LoRaWAN",
+    icon: (
+      <div className="flex items-center justify-center h-6 w-6 bg-[#2C3E50] rounded-full text-white font-bold text-xs">
+        LoRa
+      </div>
+    ),
+  },
+  {
+    name: "HTTP/HTTPS",
+    icon: (
+      <div className="flex items-center justify-center h-6 w-6 bg-[#5BBB7B] rounded-full text-white font-bold text-xs">
+        HTTP
+      </div>
+    ),
+  },
+  // Langages de programmation embarqués
+  { name: "C", icon: <SiC className="h-6 w-6 text-[#A8B9CC]" /> },
+  { name: "C++", icon: <SiCplusplus className="h-6 w-6 text-[#00599C]" /> },
+  {
+    name: "C embarqué",
+    icon: (
+      <div className="flex items-center justify-center h-6 w-6 bg-[#283593] rounded-full text-white font-bold text-xs">
+        C
+      </div>
+    ),
+  },
 ]
 
 // Nouvelles compétences pour le mobile
@@ -133,33 +169,13 @@ export default function TechStack() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <Tabs defaultValue="technical" className="w-full">
+          <Tabs defaultValue="tools" className="w-full">
             <TabsList className="grid w-full max-w-md mx-auto grid-cols-4 mb-8">
-              <TabsTrigger value="technical">Web</TabsTrigger>
               <TabsTrigger value="tools">Outils</TabsTrigger>
-              <TabsTrigger value="embedded">IoT</TabsTrigger>
+              <TabsTrigger value="technical">Web</TabsTrigger>
               <TabsTrigger value="mobile">Mobile</TabsTrigger>
+              <TabsTrigger value="embedded">IoT</TabsTrigger>
             </TabsList>
-
-            <TabsContent value="technical">
-              <div className="flex flex-wrap justify-center gap-4">
-                {technicalSkills.map((skill, index) => (
-                  <motion.div
-                    key={skill.name}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.3, delay: index * 0.05 }}
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-background/80 border border-border/50 backdrop-blur-sm hover:border-primary/30 transition-all shadow-sm hover:shadow-md">
-                      {skill.icon}
-                      <span className="text-sm font-medium">{skill.name}</span>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </TabsContent>
 
             <TabsContent value="tools">
               <div className="flex flex-wrap justify-center gap-4">
@@ -181,9 +197,9 @@ export default function TechStack() {
               </div>
             </TabsContent>
 
-            <TabsContent value="embedded">
+            <TabsContent value="technical">
               <div className="flex flex-wrap justify-center gap-4">
-                {embeddedSkills.map((skill, index) => (
+                {technicalSkills.map((skill, index) => (
                   <motion.div
                     key={skill.name}
                     initial={{ opacity: 0, y: 10 }}
@@ -204,6 +220,26 @@ export default function TechStack() {
             <TabsContent value="mobile">
               <div className="flex flex-wrap justify-center gap-4">
                 {mobileSkills.map((skill, index) => (
+                  <motion.div
+                    key={skill.name}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.3, delay: index * 0.05 }}
+                    whileHover={{ scale: 1.05 }}
+                  >
+                    <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-background/80 border border-border/50 backdrop-blur-sm hover:border-primary/30 transition-all shadow-sm hover:shadow-md">
+                      {skill.icon}
+                      <span className="text-sm font-medium">{skill.name}</span>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </TabsContent>
+
+            <TabsContent value="embedded">
+              <div className="flex flex-wrap justify-center gap-4">
+                {embeddedSkills.map((skill, index) => (
                   <motion.div
                     key={skill.name}
                     initial={{ opacity: 0, y: 10 }}
