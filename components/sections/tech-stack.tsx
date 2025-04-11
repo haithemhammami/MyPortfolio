@@ -36,6 +36,7 @@ import {
   SiRaspberrypi,
   SiPython,
   // Nouvelles icônes pour Mobile
+  SiGo,
   SiFlutter,
   SiDart,
   SiAndroidstudio,
@@ -128,6 +129,7 @@ const embeddedSkills = [
 
 // Nouvelles compétences pour le mobile
 const mobileSkills = [
+  { name: "Go", icon: <SiGo className="h-6 w-6 text-[#00ADD8]" /> },
   { name: "Flutter", icon: <SiFlutter className="h-6 w-6 text-[#02569B]" /> },
   { name: "Dart", icon: <SiDart className="h-6 w-6 text-[#0175C2]" /> },
   { name: "Android Studio", icon: <SiAndroidstudio className="h-6 w-6 text-[#3DDC84]" /> },
@@ -138,9 +140,9 @@ const mobileSkills = [
 // Toutes les compétences combinées pour la section sombre
 const allSkills = [
   ...technicalSkills,
-  ...tools.slice(0, 8), // Prendre seulement une partie des outils pour ne pas surcharger
+  ...tools.slice(0, 9), // Prendre seulement une partie des outils pour ne pas surcharger
   ...embeddedSkills.slice(0, 2),
-  ...mobileSkills.slice(0, 3),
+  ...mobileSkills.slice(0, 5),
 ]
 
 export default function TechStack() {
