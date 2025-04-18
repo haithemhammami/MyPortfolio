@@ -146,13 +146,6 @@ Il suffit de connecter votre dépôt Git et de configurer la variable `RESEND_AP
 
 ---
 
-## 📝 Licence
-
-Ce projet est sous licence **MIT**.  
-Consultez le fichier [LICENSE](LICENSE) pour plus d’informations.
-
----
-
 ## 🙏 Crédits
 
 - **Polices** : Mona Sans  

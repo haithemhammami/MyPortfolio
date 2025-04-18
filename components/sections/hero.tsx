@@ -50,7 +50,7 @@ export default function Hero() {
               asChild
               className="border-green-neon text-green-neon hover:bg-green-neon/10"
             >
-              <Link href="/CV_Haithem Hammami_CDI_Octobre .pdf" download>
+              <Link href="/CV_Haithem Hammami_CDI_Octobre.pdf" download>
                 Voir mon CV
               </Link>
             </Button>

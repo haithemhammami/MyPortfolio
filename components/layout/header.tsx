@@ -107,7 +107,7 @@ export default function Header() {
               </Link>
             ))}
             <Button size="sm" className="w-full bg-pink-neon hover:bg-pink-neon/90 hover-neon" asChild>
-              <Link href="/CV_Haithem Hammami_CDI_Octobre .pdf" download>
+              <Link href="/CV_Haithem Hammami_CDI_Octobre.pdf" download>
                 CV
               </Link>
             </Button>
