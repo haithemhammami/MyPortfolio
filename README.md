@@ -1,36 +1,165 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Moderne de H.Haithem
 
-## Getting Started
+![Logo H.Haithem](public/icon-light.svg)
 
-First, run the development server:
+Un portfolio personnel moderne, interactif et responsive développé avec Next.js, TypeScript, Tailwind CSS et Framer Motion. Ce portfolio présente mes compétences, expériences, projets et réalisations dans une interface élégante et engageante.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🌟 Caractéristiques
+
+- **Design Moderne** : Interface utilisateur élégante avec animations fluides
+- **Entièrement Responsive** : S'adapte parfaitement à tous les appareils
+- **Mode Sombre/Clair** : Thème adaptable aux préférences de l'utilisateur
+- **Animations Avancées** : Utilisation de Framer Motion pour des transitions fluides
+- **Formulaire de Contact Fonctionnel** : Intégration avec Resend pour l'envoi d'emails
+- **SEO Optimisé** : Structure optimisée pour les moteurs de recherche
+- **Accessibilité** : Respect des normes WCAG pour une expérience inclusive
+- **Performance Optimisée** : Chargement rapide et expérience utilisateur fluide
+- **Curseur Personnalisé** : Interaction améliorée sur desktop
+- **Page 404 Animée** : Expérience utilisateur améliorée même en cas d'erreur
+
+## 🛠️ Technologies Utilisées
+
+### Frontend
+- **Next.js 14** - Framework React avec App Router
+- **TypeScript** - Typage statique pour un code plus robuste
+- **Tailwind CSS** - Styling utilitaire et responsive
+- **Framer Motion** - Bibliothèque d'animation
+- **Shadcn/UI** - Composants UI réutilisables
+- **Lucide React** - Icônes modernes et personnalisables
+- **React Icons** - Bibliothèque d'icônes pour les technologies
+
+### Backend
+- **Next.js API Routes** - Endpoints API serverless
+- **Resend** - Service d'envoi d'emails
+
+### Outils
+- **ESLint** - Linting du code
+- **Prettier** - Formatage du code
+- **Git** - Contrôle de version
+
+## 📂 Structure du Projet
+
+```
+modern-portfolio/
+├── app/                    # App Router de Next.js
+│   ├── api/                # API Routes
+│   ├── blog/               # Pages du blog
+│   ├── projects/           # Pages des projets
+│   ├── globals.css         # Styles globaux
+│   ├── layout.tsx          # Layout principal
+│   ├── page.tsx            # Page d'accueil
+│   └── not-found.tsx       # Page 404
+├── components/             # Composants React
+│   ├── layout/             # Composants de mise en page (header, footer)
+│   ├── sections/           # Sections principales du portfolio
+│   ├── ui/                 # Composants UI réutilisables
+│   └── ...                 # Autres composants
+├── lib/                    # Utilitaires et fonctions
+├── public/                 # Fichiers statiques
+│   ├── fonts/              # Polices personnalisées
+│   └── ...                 # Images et autres assets
+├── types/                  # Définitions de types TypeScript
+├── next.config.mjs         # Configuration Next.js
+├── tailwind.config.ts      # Configuration Tailwind CSS
+└── tsconfig.json           # Configuration TypeScript
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Installation et Démarrage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prérequis
+- Node.js 18.0.0 ou version ultérieure
+- npm ou yarn
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Installation
 
-## Learn More
+1. **Clonez le dépôt**
+ ```bash
+   git clone 
+   https://github.com/haithemhammami/MyPortfolio.git
+   cd MyPortfolio
+   ```
+2. **Installez les dépendances**
+ ```bash
+    npm install
+    # ou
+    yarn install
+   ```
+3. **Configurez les variables d’environnement**
+ Créez un fichier .env.local à la racine du projet et 
+  ajoutez votre clé Resend :
+ ```
+  RESEND_API_KEY=votre_clé_api_resend
+ ```
+4. **Lancez le serveur de développement**
+ ```bash
+    npm run dev
+    # ou
+    yarn dev
+   ```
+5. **Accédez à l'application**
+Ouvrez votre navigateur à l’adresse : http://localhost:3000
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠️ Personnalisation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🎨 Contenu
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Informations personnelles :**  
+Modifiez les fichiers de composants dans `components/sections/` (par ex. `Hero.tsx`, `About.tsx`…)
 
-## Deploy on Vercel
+**Projets :**  
+Ajoutez vos projets dans `components/sections/projects.tsx`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Blog :**  
+Personnalisez les articles dans `components/sections/blog.tsx`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+### 🖌️ Style
+
+**Couleurs principales :**  
+Modifiables dans `tailwind.config.ts`
+
+**Styles globaux :**  
+Définis dans `app/globals.css`
+
+**Thème clair/sombre :**  
+Géré via `components/theme-provider.tsx`
+
+---
+
+### 🔁 Logo
+
+- Remplacez les fichiers SVG dans `public/`
+- Personnalisez le composant `Logo` dans `components/logo.tsx`
+
+---
+
+## 🚀 Déploiement
+
+Ce portfolio peut être déployé facilement sur des plateformes comme :
+
+- [Vercel](https://vercel.com/)
+- [Netlify](https://www.netlify.com/)
+- [Render](https://render.com/)
+
+Il suffit de connecter votre dépôt Git et de configurer la variable `RESEND_API_KEY` dans les variables d’environnement.
+
+---
+
+## 📝 Licence
+
+Ce projet est sous licence **MIT**.  
+Consultez le fichier [LICENSE](LICENSE) pour plus d’informations.
+
+---
+
+## 🙏 Crédits
+
+- **Polices** : Mona Sans  
+- **Icônes** : Lucide React & React Icons  
+- **Composants UI** : [shadcn/ui](https://ui.shadcn.dev/)  
+- **Animations** : [Framer Motion](https://www.framer.com/motion/)
+
+---
+
+## 👨‍💻 Développé avec ❤️ par **H.Haithem**
