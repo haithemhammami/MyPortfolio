@@ -33,6 +33,49 @@ const projects = [
     featured: true,
   },
   {
+    id: "project5",
+    title: "ThinkShare",
+    description:
+      "Thinkshare est une plateforme sociale académique innovante qui révolutionne le partage de savoir. Pensée comme un Instagram académique, Thinkshare permet aux experts, enseignants et formateurs de publier des contenus éducatifs sous forme de cours, fiches de révision et supports interactifs.",
+    image: "/thinkshare.png?height=300&width=600",
+    tags: [
+      "Flutter", "Go", "Gin", "PostgreSQL", "JWT", "Stripe", "Azure", "Kubernetes", "Terraform", "Docker", "CI/CD", "Grafana", "Prometheus"
+    ],
+    liveUrl: "https://thinkshare.app",
+    githubUrl: "https://github.com/haithemhammami/thinkshare.git",
+    apkUrl: "https://thinkshare.app/download/apk", // lien fictif, adapte-le si besoin
+    featured: true, // Mettre en avant
+    details: {
+      resume: "Thinkshare est une plateforme sociale académique innovante qui révolutionne le partage de savoir. Pensée comme un Instagram académique, Thinkshare permet aux experts, enseignants et formateurs de publier des contenus éducatifs sous forme de cours, fiches de révision et supports interactifs.",
+      objectifs: [
+        "Promouvoir une nouvelle façon d’apprendre, plus interactive et engageante.",
+        "Offrir aux experts un espace pour monétiser leurs contenus premium via des abonnements mensuels.",
+        "Créer une communauté éducative vivante et collaborative."
+      ],
+      fonctionnalites: [
+        "Feed interactif avec scroll infini (posts publics ou privés)",
+        "Création et publication de cours ou fiches",
+        "Contenus premium accessibles via abonnement",
+        "Messagerie intégrée pour échanger avec les experts ou d'autres utilisateurs",
+        "Gestion de profils (expert & utilisateur)",
+        "Support des thèmes clair et sombre",
+        "Dashboard analytics pour les experts (consultations, revenus)"
+      ],
+      stack: {
+        frontend: ["Flutter (web & APK mobile)", "Provider", "GoRouter", "Dio"],
+        backend: ["Go (Golang)", "Gin", "PostgreSQL", "JWT", "Stripe"],
+        infra: ["Azure Cloud", "Kubernetes (K8s)", "Terraform (IaC)", "Docker", "GitHub Actions"],
+        monitoring: ["Grafana", "Prometheus", "Azure Monitor"]
+      },
+      deploiement: [
+        "Frontend Web : Flutter web hébergé sur Firebase Hosting",
+        "APK Mobile : Déployé en parallèle (Android)",
+        "Backend API : Conteneurisé et orchestré via Kubernetes sur Azure"
+      ],
+      pourquoi: "Thinkshare offre une expérience académique unique, mêlant le social et l’apprentissage, tout en donnant aux experts un moyen simple et sécurisé de partager et valoriser leurs connaissances."
+    }
+  },
+  {
     id: "project3",
     title: "Mon Portfolio",
     description:
@@ -41,7 +84,7 @@ const projects = [
     tags: ["Next.js", "React", "Portfolio"],
     liveUrl: "https://haithem.netlify.app/",
     githubUrl: "https://github.com/haithemhammami/MyPortfolio.git",
-    featured: true,
+    featured: false, // Ne plus mettre en avant
   },
   {
     id: "project4",
@@ -74,8 +117,8 @@ export default function ProjectsPage() {
             Retrouvez l'ensemble de mes réalisations, du plus récent au plus emblématique.
           </p>
           <Button asChild variant="ghost" className="mt-4">
-            <Link href="/">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Retour à l'accueil
+            <Link href="/#projects">
+              <ArrowLeft className="mr-2 h-4 w-4" /> Retour aux Projets
             </Link>
           </Button>
         </motion.div>
@@ -121,7 +164,14 @@ export default function ProjectsPage() {
                   {project.liveUrl && (
                     <Button variant="outline" size="sm" asChild>
                       <Link href={project.liveUrl} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4 mr-1" /> Démo
+                        <ExternalLink className="h-4 w-4 mr-1" /> Version Web
+                      </Link>
+                    </Button>
+                  )}
+                  {project.apkUrl && (
+                    <Button variant="outline" size="sm" asChild>
+                      <Link href={project.apkUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="h-4 w-4 mr-1" /> APK Android
                       </Link>
                     </Button>
                   )}
