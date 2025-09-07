@@ -32,7 +32,7 @@ const projects = [
 		featured: true,
 	},
 	{
-		id: "projet5",
+		id: "project5",
 		title: "ThinkShare",
 		description:
 			"Thinkshare est une plateforme académique innovante qui facilite le partage de savoir en permettant aux experts et enseignants de publier des contenus éducatifs variés.",
