@@ -68,7 +68,7 @@ export default function Header() {
           ))}
           <ThemeToggle />
           <Button size="sm" className="ml-4 bg-pink-neon hover:bg-pink-neon/90 hover-neon" asChild>
-            <Link href="/CV_Haithem Hammami_Ingénieur Logiciel Full Stack.pdf" download>
+            <Link href="/CV_Haithem Hammami_Dév Full Stack.pdf" download>
               CV
             </Link>
           </Button>
@@ -107,7 +107,7 @@ export default function Header() {
               </Link>
             ))}
             <Button size="sm" className="w-full bg-pink-neon hover:bg-pink-neon/90 hover-neon" asChild>
-              <Link href="/CV_Haithem Hammami_Ingénieur Logiciel Full Stack.pdf" download>
+              <Link href="/CV_Haithem Hammami_Dév Full Stack.pdf" download>
                 CV
               </Link>
             </Button>
