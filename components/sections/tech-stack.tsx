@@ -18,7 +18,7 @@ import {
   SiMongodb,
   SiPostgresql,
   SiFirebase,
-  SiAmazon,
+  //SiAmazon,
   SiDocker,
   SiKubernetes,
   SiGit,
@@ -48,7 +48,7 @@ import {
   SiC,
   SiCplusplus,
 } from "react-icons/si"
-
+import { FaAws } from "react-icons/fa";
 // Définition des technologies avec leurs icônes
 const technicalSkills = [
   { name: "HTML", icon: <SiHtml5 className="h-6 w-6 text-[#E34F26]" /> },
@@ -68,7 +68,7 @@ const tools = [
   { name: "PostgreSQL", icon: <SiPostgresql className="h-6 w-6 text-[#4169E1]" /> },
   { name: "Prisma", icon: <SiPrisma className="h-6 w-6 text-[#2D3748]" /> },
   { name: "Firebase", icon: <SiFirebase className="h-6 w-6 text-[#FFCA28]" /> },
-  { name: "AWS", icon: <SiAmazon className="h-6 w-6 text-[#FF9900]" /> },
+  { name: "AWS", icon: <FaAws className="h-6 w-6 text-[#FF9900]" /> },
   { name: "Docker", icon: <SiDocker className="h-6 w-6 text-[#2496ED]" /> },
   { name: "Kubernetes", icon: <SiKubernetes className="h-6 w-6 text-[#326CE5]" /> },
   { name: "Git", icon: <SiGit className="h-6 w-6 text-[#F05032]" /> },
