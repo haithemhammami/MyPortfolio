@@ -7,7 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 // Import des icônes de react-icons
 import {
   SiHtml5,
-  SiCss3,
+  //SiCss3,
   SiJavascript,
   SiTypescript,
   SiReact,
@@ -44,15 +44,16 @@ import {
   SiOpenjdk,
   SiMqtt,
   SiBluetooth,
-  SiWii,
+  //SiWii,
   SiC,
   SiCplusplus,
 } from "react-icons/si"
 import { FaAws } from "react-icons/fa";
+import { FaCss3Alt , FaWifi  } from "react-icons/fa";
 // Définition des technologies avec leurs icônes
 const technicalSkills = [
   { name: "HTML", icon: <SiHtml5 className="h-6 w-6 text-[#E34F26]" /> },
-  { name: "CSS", icon: <SiCss3 className="h-6 w-6 text-[#1572B6]" /> },
+  { name: "CSS", icon: <FaCss3Alt className="h-6 w-6 text-[#1572B6]" /> },
   { name: "JavaScript", icon: <SiJavascript className="h-6 w-6 text-[#F7DF1E]" /> },
   { name: "TypeScript", icon: <SiTypescript className="h-6 w-6 text-[#3178C6]" /> },
   { name: "React", icon: <SiReact className="h-6 w-6 text-[#61DAFB]" /> },
@@ -97,7 +98,7 @@ const embeddedSkills = [
   // Technologies de communication
   { name: "MQTT", icon: <SiMqtt className="h-6 w-6 text-[#660066]" /> },
   { name: "Bluetooth", icon: <SiBluetooth className="h-6 w-6 text-[#0082FC]" /> },
-  { name: "WiFi", icon: <SiWii className="h-6 w-6 text-[#0089D0]" /> },
+  { name: "WiFi", icon: <FaWifi className="h-6 w-6 text-[#0089D0]" /> },
   {
     name: "LoRaWAN",
     icon: (
